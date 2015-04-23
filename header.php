@@ -63,11 +63,15 @@
 				<span class="visible-lg-inline-block logo"></span>
 			</a>
 		</header>
+		<header class="commonTop text-center">
+			<nav class="main_nav yahei">
+				<?php wp_nav_menu( array(
+					'menu'=>'mainNav',
+					'container'=>false,
+					"menu_class"=>"list-inline"
+				));?>
+			</nav>
+			<?php get_search_form(); ?>
+		</header> <!-- End commonTop -->
 
 		<div class="pageWrap">
-			<header class="commonTop fix mt10">
-				<nav class="mainNav fix l">
-					<?php wp_nav_menu( array('menu'=>'mainNav','container'=>false) );?>
-				</nav>
-				<?php get_search_form(); ?>
-			</header> <!-- End commonTop -->

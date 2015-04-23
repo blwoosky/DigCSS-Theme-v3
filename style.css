@@ -1,8 +1,28 @@
 body { background: url(images/bg.png) #535353; background-attachment: fixed; }
 .trans{ -webkit-transition:0.3s;transition:0.3s; }
+.yahei{ font-family: "Microsoft YaHei"; }
+
 .pageHeader{  }
 .pageHeader a{height:80px;overflow:hidden;position: relative;padding-left:0;-webkit-transition:0.3s 0.2s;transition:0.3s 0.2s; }
 .pageHeader a:hover{ padding-left:80px; -webkit-transition:0.3s;transition:0.3s;}
 .pageHeader a:hover .boy{ top:0;-webkit-transition:0.3s 0.1s;transition:0.3s 0.1s; }
 .pageHeader .boy{  -webkit-transition:0.3s;transition:0.3s;width:80px;height:80px; background:url(images/logo.png) -9px -4px;position: absolute;top:80px;left:0; }
 .pageHeader .logo{ width:180px;height:80px; background:url(images/logo.png) -89px -4px; }
+
+.main_nav{ font-size:12px;line-height: 1em; }
+.main_nav .list-inline>li{ padding:0; }
+.main_nav .current_page_item a{
+	border: 3px solid white;
+	-moz-border-image: url(images/nav.png) 3 3 repeat;
+	-webkit-border-image: url(images/nav.png) 3 3 repeat;
+	border-image: url(images/nav.png) 3 3 repeat;
+}
+.main_nav a{ display: inline-block;padding:4px 14px; }
+.main_nav .home a{ color:#ffb64c; }
+.main_nav .article a{ color:#7a68ff; }
+.main_nav .courses a{ color:#26a1cf; }
+.main_nav .videos a{ color:#f2ff84; }
+.main_nav .code a{ color:#ff84b6; }
+.main_nav .demo a{ color:#0bff10; }
+.main_nav .contact a{ color:#27fffb; }
+.pageWrap{ padding:30px;box-shadow:0 0 30px rgba(0,0,0,0.2);background:url(images/bg_1px.png);background:rgba(255,255,255,0.1); }
