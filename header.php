@@ -32,15 +32,15 @@
 	
 	<link rel="shortcut icon" href="/favicon.ico">
 	 <!--[if !IE]><!-->
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	  <!--<![endif]-->
 	  <!--[if lt IE 9]>
 	  <link rel="stylesheet" href="<?php echo home_url(); ?>/css/oldie.css">
 	  <![endif]-->
 	  <!--[if IE 9]>
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css">
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	  <![endif]-->
 
 
@@ -56,15 +56,15 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div class="container-fluid">
+	<div class="container-fluid pageWrap">
 		<header class="pageHeader text-center">
-			<a href="<?php echo home_url(); ?>" class="visible-lg-inline-block">
-				<span class="visible-lg-inline-block boy"></span>
-				<span class="visible-lg-inline-block logo"></span>
+			<a href="<?php echo home_url(); ?>" class="dib">
+				<span class="dib boy"></span>
+				<span class="dib logo"></span>
 			</a>
 		</header>
 		<header class="commonTop text-center">
-			<nav class="main_nav yahei">
+			<nav class="main_nav yahei dib">
 				<?php wp_nav_menu( array(
 					'menu'=>'mainNav',
 					'container'=>false,
@@ -74,4 +74,4 @@
 			<?php get_search_form(); ?>
 		</header> <!-- End commonTop -->
 
-		<div class="pageWrap">
+		<div class="mainBody mt10">
