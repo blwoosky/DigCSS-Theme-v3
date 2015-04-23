@@ -1,0 +1,8 @@
+body { background: url(images/bg.png) #535353; background-attachment: fixed; }
+.trans{ -webkit-transition:0.3s;transition:0.3s; }
+.pageHeader{  }
+.pageHeader a{height:80px;overflow:hidden;position: relative;padding-left:0;-webkit-transition:0.3s 0.2s;transition:0.3s 0.2s; }
+.pageHeader a:hover{ padding-left:80px; -webkit-transition:0.3s;transition:0.3s;}
+.pageHeader a:hover .boy{ top:0;-webkit-transition:0.3s 0.1s;transition:0.3s 0.1s; }
+.pageHeader .boy{  -webkit-transition:0.3s;transition:0.3s;width:80px;height:80px; background:url(images/logo.png) -9px -4px;position: absolute;top:80px;left:0; }
+.pageHeader .logo{ width:180px;height:80px; background:url(images/logo.png) -89px -4px; }
