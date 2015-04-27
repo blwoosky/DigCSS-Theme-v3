@@ -1,8 +1,7 @@
 <?php
 get_header(); 
 ?>
-<div class="mainContent arcPage mt10 fix">
-	<div class="borderBox colLeft l per55" id="post-<?php the_ID(); ?>">
+	<div id="post-<?php the_ID(); ?>">
 		<article class="Box arcWrap">
 			<div class="Box digcssPath">
 				<a href="<?php echo home_url(); ?>">Home</a> &gt;
@@ -24,5 +23,6 @@ get_header();
 		<?php if (function_exists('oposts_show')) oposts_show(); ?>
 		<?php comments_template(); ?>
 	</div>
+</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

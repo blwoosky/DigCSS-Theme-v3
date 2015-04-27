@@ -54,7 +54,27 @@
 	<?php endwhile; endif;wp_reset_postdata();?>
 	<?php #end latest demo?>
 
+	<?php #start articles?>
+	<div class="mt30 bgp sideArchives">
+		<h2 class="BoxTitle">article:</h2>
+		<div class="p10">
+			<h3 class="BoxInnerTitle">文章分类:</h3>
+			<ul class="list-inline mt10">
+				<?php wp_list_categories(
+					'show_count=1&title_li='
+				); ?> 
+			</ul>
+			<h3 class="BoxInnerTitle">文章存档:</h3>
+			<ul class="list-inline mt10">
+				<?php wp_get_archives(
+					'show_post_count=1'
+				); ?> 
+			</ul>
+		</div>
+	</div>
+	<?php #end articles?>
 
+	<?php #start latest code?>
 	<?php
 		$the_query = new WP_Query(array('post_type' => 'snippets','posts_per_page' => 6));
 		if(have_posts()):
@@ -62,7 +82,7 @@
 
 	<div class="bgp mt30">
 		<h2 class="BoxTitle">latest code</h2>
-		<ul class="BoxInner">
+		<ul class="sideList">
 		<?php 
 			while ( $the_query->have_posts() ) :
 				$the_query->the_post();
@@ -71,8 +91,8 @@
 		<?php endwhile;?>
 		</ul>
 	</div>
-
 	<?php  endif;wp_reset_postdata();?>
+	<?php #end latest code?>
 
 	<?php if (function_exists('vote_poll') && !in_pollarchive()): ?>
 	<div class="bgp mt30">

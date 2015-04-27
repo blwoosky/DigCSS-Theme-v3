@@ -67,7 +67,7 @@ add_filter( 'cpt_post_types', 'my_cpt_post_types' );
 				<div id="comment-<?php comment_ID();?>" class="fix">
 					<div class="img">
 <?php
-							echo get_avatar( $comment, 100 );
+						echo get_avatar( $comment, 100 );
 ?>
 					</div>
 					<div class="comment-content">
@@ -89,5 +89,6 @@ add_filter( 'cpt_post_types', 'my_cpt_post_types' );
 		}
 	endif;
 ?>
+
 
 

@@ -73,5 +73,6 @@
 			</nav>
 			<?php get_search_form(); ?>
 		</header> <!-- End commonTop -->
-
-		<div class="mainBody mt10">
+		<div class="mainBody bShadow p30 mt10 row">
+			<!-- Start left column -->
+			<div class="col-md-9 col-lg-8">
