@@ -1,3 +1,4 @@
+		</div>
 	</div> <!-- END main body -->
 	<footer class="text-center">
 		Designed By <a href="http://blwoosky.com" target="_blank">blwoosky</a><br/>
