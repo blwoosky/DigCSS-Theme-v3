@@ -40,15 +40,14 @@ add_filter( 'cpt_post_types', 'my_cpt_post_types' );
 	
 	function custom_excerpt_length( $length ) {
 		return 100;
-		}
+	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 	
 	function new_excerpt_more( $more ) {
 		return '.....';
 	}
-	add_filter('excerpt_more', 'new_excerpt_more');
-	
-	
+	add_filter( 'excerpt_more', 'new_excerpt_more' );
+
 	/*Mydiy Comments*/
 	if ( ! function_exists( 'mydiy_comment' ) ) :
 		function mydiy_comment($comment,$args,$depth){

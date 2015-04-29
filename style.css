@@ -48,14 +48,14 @@ ul{ list-style: none;padding: 0;margin:0;}
 .mainBody{ background:rgba(255,255,255,0.1); }
 .main_nav{ font-size:14px;line-height: 1em; }
 .main_nav .list-inline>li{ padding:0; }
-.main_nav .current_page_item a{
+.main_nav .current-menu-item a{
 	border: 3px solid rgba(255,255,255,0.6);
 	-moz-border-image: url(images/nav.png) 3 3 repeat;
 	-webkit-border-image: url(images/nav.png) 3 3 repeat;
 	border-image: url(images/nav.png) 3 3 repeat;
 }
 
-.main_nav a{ display: inline-block;padding:4px 14px; }
+.main_nav a{ border:3px solid transparent; display: inline-block;padding:2px 12px; }
 .main_nav .home a{ color:#ffb64c; }
 .main_nav .article a{ color:#7a68ff; }
 .main_nav .courses a{ color:#26a1cf; }
