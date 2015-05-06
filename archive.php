@@ -1,28 +1,29 @@
 <?php get_header(); ?>
 
-<div class="mainContent mt10 fix">
-	<div class="homeArcList colLeft borderBox l per55">
-		<div class="Box">
+	
+		<div>
 			<?php $posts = query_posts($query_string . '&orderby=date&showposts=-1'); ?>
-			<?php if (have_posts()) : ?>
-				<?php /* If this is a category archive */ if (is_category()) { ?>
-					<h2 class="BoxTitle">&#8216;<?php single_cat_title(); ?>&#8217;下所有文章</h2>
-				<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-					<h2 class="BoxTitle">&#8216;<?php single_tag_title(); ?>&#8217;相关的文章</h2>
-				<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-					<h2 class="BoxTitle"><?php the_time('Y年m月d日'); ?>所有文章</h2>
-				<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-					<h2 class="BoxTitle"><?php the_time('Y年m月'); ?>所有文章</h2>
-				<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-					<h2 class="BoxTitle"><?php the_time('Y年'); ?>所有文章</h2>
-				<?php /* If this is an author archive */ } elseif (is_author()) { ?>
-					<h2 class="BoxTitle">Author Archive</h2>
-				<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-					<h2 class="BoxTitle">Blog Archives</h2>
-				<?php } ?>
+				<div class="p10 bgp">
+					<?php if (have_posts()) : ?>
+					<?php /* If this is a category archive */ if (is_category()) { ?>
+						<h2 class="BoxTitle1">&#8216;<?php single_cat_title(); ?>&#8217;下所有文章</h2>
+					<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
+						<h2 class="BoxTitle1">&#8216;<?php single_tag_title(); ?>&#8217;相关的文章</h2>
+					<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
+						<h2 class="BoxTitle1"><?php the_time('Y年m月d日'); ?>所有文章</h2>
+					<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
+						<h2 class="BoxTitle1"><?php the_time('Y年m月'); ?>所有文章</h2>
+					<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
+						<h2 class="BoxTitle1"><?php the_time('Y年'); ?>所有文章</h2>
+					<?php /* If this is an author archive */ } elseif (is_author()) { ?>
+						<h2 class="BoxTitle1">Author Archive</h2>
+					<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
+						<h2 class="BoxTitle1">Blog Archives</h2>
+					<?php } ?>
+				</div>
 			<ul>
 			<?php while (have_posts()) : the_post(); ?>
-				<li class="BoxInner" id="post-<?php the_ID(); ?>" >
+				<li class="bgp mt10 p20" id="post-<?php the_ID(); ?>" >
 					<h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
 					<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>	
 					<p>

@@ -22,11 +22,20 @@
 }
 
 /*custom style*/
+
+div[rel] { position: relative;margin-top: 40px; }
+ 
+div[rel]:before { content: attr(rel);display: block;position: absolute;bottom: 100%;width: 100%;line-height: 25px;color: #fff;background: #DA7000;text-indent: 10px;text-transform: uppercase; }
+ 
+
 body { background: url(images/bg.png) #535353; background-attachment: fixed; color:#111; }
+h1,h2,h3,h4,h5,h6{ margin:0; }
 a{ color:#111; }
 .trans{ -webkit-transition:0.3s;transition:0.3s; }
 .yahei{ font-family: "Microsoft YaHei"; }
 .dib{ display: inline-block; }
+.ti10{ text-indent:10px; }
+.npt15{ padding:0 15px 15px 15px; }
 .p10{ padding:10px; }.p15{ padding:15px; }.p20{ padding:20px; }.p25{ padding:25px; }.p30{ padding:30px; }
 .mt10{ margin-top:10px; }.mb10{ margin-bottom:10px; }
 .mt30{ margin-top:30px; }.mb30{ margin-bottom:30px; }
@@ -82,6 +91,7 @@ ul{ list-style: none;padding: 0;margin:0;}
 .arcMeta a{ color:#9c9c9c;}
 
 .BoxTitle{ margin:0 0 12px 0; font-size:12px;font-family: georgia;text-transform:capitalize;font-variant:small-caps;letter-spacing: 2px;padding-bottom:6px;border-bottom:1px solid #ababab; }
+.BoxTitle1{margin:0; font-size:14px;font-family: georgia;text-transform:capitalize;font-variant:small-caps;letter-spacing: 2px; }
 .BoxInnerTitle{ margin:0; font-size:12px;font-weight: bold;}
 .sideBar .bgp{ padding:10px; }
 .sideBar>div:first-of-type{ margin-top:0; } 
@@ -91,16 +101,82 @@ ul{ list-style: none;padding: 0;margin:0;}
 
 .thumbnailIntro h3{ font-size:18px; }
 .thumbnailIntro .arcMeta{padding:5px 0;}
+.rImg img,
+.thumbnailPage img,
 .thumbnailBox img{ width:100%;max-width: 100%;height: auto; }
 .thumbnailExcerpt{ font-size:12px;line-height: 2em; }
 
-
+.thumbnailTxt h2{ font-size:18px;margin:0; }
 
 /* Demo Page */
 
-.allTag{ display: none;width:300px;position: absolute; }
+.allTag{ display: none;width:300px;position: absolute;z-index:1; }
 .codeList{ line-height: 2em;padding:10px 0 0 0; }
 .codeList a{font-size:12px; padding: .2em .6em .3em;background:#337AB7;color:#fff;}
+
+.thumbnailList>li{ margin-bottom:10px; position: relative; }
+.thumbnailTxt{ left:0;top:0; opacity: 0;visibility: hidden;position:absolute;width:100%; }
+.thumbnailList>li:hover .thumbnailTxt{ opacity: 1;visibility: visible;z-index:1; }
+
+/* Article Page */
+
+.arcWrap .arcMeta { text-align: center; }
+ 
+.arcTitle { margin:0; font-size: 26px; font-family: "Microsoft YaHei"; text-align: center; line-height: 1.2em; padding: 10px; }
+ 
+.arcContent { text-align: justify; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; }
+.arcContent .img { margin:10px 0; text-align: center; line-height: 0; padding: 10px; background: rgba(204, 204, 204, 0.3); border: 1px solid #ccc; }
+.arcContent .img a:hover img { background: none; }
+.arcContent .img img { background: none; border: none; padding: 0; }
+.arcContent a:hover img { border-color: #026fb2; background: rgba(32, 135, 199, 0.4); }
+.arcContent img { padding: 5px; background: rgba(32, 135, 199, 0.1); border: 1px solid #2087c7; max-width: 100%; height:auto; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: 0.2s; transition: 0.2s; }
+.arcContent code { padding: 1px 5px; border: 1px solid rgba(0, 0, 0, 0.2); margin: 0 3px; background: rgba(0, 0, 0, 0.1); border-radius: 3px; display: inline-block; line-height: 1em; }
+.arcContent a { color: #CF7400; }
+.arcContent a:hover { color: #02a5ff; }
+.arcContent a:active { color: #00649b; }
+.arcContent h2, .arcContent h3, .arcContent h4 {font-weight:bold;margin:0;padding: 10px 0; position: relative; }
+.arcContent h2 { font-size: 34px; }
+.arcContent h3 { font-size: 24px; }
+.arcContent h4 { font-size: 20px; }
+.arcContent blockquote { padding-left: 5px; border-left: 5px solid rgba(0, 0, 0, 0.2); color: #535353; }
+.arcContent p { line-height: 2em; font-size: 14px; margin: 18px 0; }
+.arcContent ul, .arcContent ol { font-size: 14px; line-height: 1.8em; padding-left: 20px;list-style-type:disc; }
+.arcContent ul ol,.arcContent ol ul{ list-style-type:circle; }
+.arcContent h2 { font-size: 32px; }
+.arcContent h3 { font-size: 24px; }
+.arcContent h4 { font-size: 18px; } }
+.arcContent b { font-weight: bold; }
+.arcContent em, .arcContent i { font-style: italic; }
+
+/* Comments */
+
+.comments .respond input:not([type="submit"]), .comments .respond textarea { color: #000; -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4); box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4); }
+.comments .respond input:not([type="submit"]):focus, .comments .respond textarea:focus { -webkit-box-shadow: inset 0 0 10px rgba(0, 118, 209, 0.5); box-shadow: inset 0 0 10px rgba(0, 118, 209, 0.5); }
+.comments .respond input[type="submit"] { color: #0076D1; background: rgba(0, 118, 209, 0.1); border-bottom: 1px solid rgba(0, 118, 209, 0.2); padding: 5px 8px; }
+.comments .respond input[type="submit"]:hover { color: #fff; background: rgba(0, 118, 209, 0.5); border-bottom: 1px solid rgba(0, 118, 209, 0.8); }
+.comments .respond .BoxTitle { color: #0076D1; }
+ 
+.commentlist .bgp { margin-bottom: 10px; position: relative; }
+.commentlist .img { float: left; margin-right: 10px; }
+.commentlist .img img { width: 100%; height: 100%; }
+.commentlist .comment-content { display: table-cell; }
+.commentlist .comment-content { display: block; } }
+ 
+ul.children { margin-right: -20px; }
+ul.children .bgp { -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+ 
+.reply a, .cancel-comment-reply a, .button { font-size: 14px !important; display: inline-block !important; color: #0076D1 !important; background: rgba(0, 118, 209, 0.1) !important; border-bottom: 1px solid rgba(0, 118, 209, 0.2) !important; padding: 5px 8px !important; -webkit-transition: 0.2s; transition: 0.2s; }
+.reply a:hover, .cancel-comment-reply a:hover, .button:hover { color: #fff !important; background: rgba(0, 118, 209, 0.5) !important; border-bottom: 1px solid rgba(0, 118, 209, 0.8) !important; }
+ 
+.reply, .cancel-comment-reply { text-align: right; margin: 10px 0; }
+ 
+.vcard b { display: block; font-size: 28px; text-transform: capitalize; color: #c75a08; font-family: "Microsoft YaHei"; }
+.vcard a { color: #c75a08; }
+.vcard a:hover { background: rgba(17, 17, 17, 0.1); border-bottom: 1px solid rgba(17, 17, 17, 0.2); }
+.vcard i { font-family: georgia; font-size: 14px; color: #909090; letter-spacing: 0.4em; display: block; margin: 10px 0; }
+ 
+.comment-body { font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; font-size: 14px; color: #0e0e0e; line-height: 1.6em; text-align: justify; }
+.comment-body p { margin: 10px 0; text-indent: 2em; }
 
 
 footer{ color:#ccc; padding:36px 0;font-size:12px;font-family: georgia;text-transform: capitalize; }
