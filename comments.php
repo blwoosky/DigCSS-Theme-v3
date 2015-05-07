@@ -12,11 +12,11 @@
 
 <?php if ( have_comments() ) : ?>
 
-	<div class="comments Box mt10">
-		<h2 class="BoxTitle">
+	<div class="comments mt10">
+		<h2 class="BoxTitle1 bgp p10">
 			《<?php the_title(); ?>》上的 <?php comments_number( "0", "1","%" ); ?>  条评论 / Comments:
 		</h2>
-		<ol class="commentlist">
+		<ol class="commentlist mt10">
 			<?php wp_list_comments('callback=mydiy_comment'); ?>
 		</ol>
 	</div>
@@ -35,10 +35,10 @@
 
 <?php if ( comments_open() ) : ?>
 
-<div id="respond" class="respond">
+<div id="respond" class="respond bgp p10">
 
-		<div class="cancel-comment-reply">
-			<?php cancel_comment_reply_link(); ?>
+		<div class="text-right cancel-comment-reply">
+			<span class=" btn btn-xs btn-primary"><?php cancel_comment_reply_link(); ?></span>
 		</div>
 
 		<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
@@ -47,33 +47,32 @@
 
 		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 			<?php if ( is_user_logged_in() ) : ?>
-			<p class="logged BoxTitle">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Log out of this account">Log out &raquo;</a></p>
+			<p class="logged BoxTitle">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php" class="label label-primary"><?php echo $user_identity; ?></a> <a href="<?php echo wp_logout_url( get_permalink() ); ?>" class="label label-primary" title="Log out of this account">Log out &raquo;</a></p>
 			<div>
 			<?php else : ?>
 			<div>
-				<div class="respond-item">
-					<label for="author" class="BoxTitle">Name <?php if ($req) echo "<span>(*)</span>"; ?>:</label>
-					<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+				<div class="form-group">
+					<label for="author">Name <?php if ($req) echo "<span>(*)</span>"; ?>:</label>
+					<input type="text" class="form-control" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 				</div>
-				<div class="respond-item">
-					<label for="email" class="BoxTitle">Email <?php if ($req) echo "<span>(*)</span>"; ?>:</label>
-					<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-					
+				<div class="form-group">
+					<label for="email">Email <?php if ($req) echo "<span>(*)</span>"; ?>:</label>
+					<input type="text" class="form-control" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 				</div>
-				<div class="respond-item">
-					<label for="url" class="BoxTitle">URL:</label>
-					<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
+				<div class="form-group">
+					<label for="url">URL:</label>
+					<input type="text" class="form-control" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 				</div>
 			<?php endif; ?>
 
 				<!--<p>You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
 
-				<div class="respond-item">
-					<label for="comment" class="BoxTitle">Comment:</label>
-					<textarea name="comment" id="comment" cols="30" rows="10" tabindex="4"></textarea>
+				<div class="form-group">
+					<label for="comment">Comment:</label>
+					<textarea name="comment" class="form-control" id="comment" cols="30" rows="10" tabindex="4"></textarea>
 				</div>
-				<div class="respond-item">
-					<input name="submit" type="submit" id="submit" tabindex="5" value="提交评论" />
+				<div class="text-right mt10">
+					<input name="submit" type="submit" id="submit" tabindex="5" class="btn btn-sm btn-primary" value="提交评论" />
 					<?php comment_id_fields(); ?>
 				</div>
 			</div>

@@ -16,7 +16,7 @@
 		<?php if ( has_post_thumbnail() ) {?>
 		<div class="thumbnailBox fix">
 			<a href="#" class="thumbnailImg"><?php  the_post_thumbnail();?></a>
-			<div class="BoxInner thumbnailIntro borderBox">
+			<div class="mt10 thumbnailIntro">
 				<h3><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
 				<div class="runTime">RUNTIME:  <?php the_field('video_runtime');?></div>
 				<div class="thumbnailExcerpt">
@@ -41,7 +41,7 @@
 		<?php if ( has_post_thumbnail() ) {?>
 		<div class="thumbnailBox fix">
 			<a href="<?php echo home_url(); ?>/examples/<?php the_field('demo_slink');?>" class="thumbnailImg"><?php  the_post_thumbnail();?></a>
-			<div class="BoxInner thumbnailIntro borderBox">
+			<div class="mt10 thumbnailIntro">
 				<h3 class="yahei"><a href="<?php echo home_url(); ?>/examples/<?php the_field('demo_slink');?>"><?php the_title();?></a></h3>
 				<div class="arcMeta">上次修改时间: <?php the_modified_time( 'Y-m-d H:i' ); ?></div>
 				<div class="thumbnailExcerpt">

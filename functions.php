@@ -56,14 +56,14 @@ add_filter( 'cpt_post_types', 'my_cpt_post_types' );
 				case 'pingback' :
 				case 'trackback' :
 ?>
-			<li class="post pingback BoxInner">
+			<li class="post pingback p10 bgp bShadow">
 				<p><?php _e( 'Pingback:', 'twentyeleven' );?> <?php comment_author_link();?><?php edit_comment_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' );?></p>
 <?php
 					break;
 				default :
 ?>
-			<li class="BoxInner" <?php comment_class();?> id="li-comment-<?php comment_ID();?>">
-				<div id="comment-<?php comment_ID();?>" class="fix">
+			<li class="p10 bgp bShadow" <?php comment_class();?> id="li-comment-<?php comment_ID();?>">
+				<div id="comment-<?php comment_ID();?>" class="clearfix rel">
 					<div class="img">
 <?php
 						echo get_avatar( $comment, 100 );
@@ -79,7 +79,9 @@ add_filter( 'cpt_post_types', 'my_cpt_post_types' );
 						</div>
 					</div>
 					<div class="reply">
-						<?php comment_reply_link( array_merge( $args, array('reply_text' =>'REPLY', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) );?>
+						<span class="btn btn-xs btn-primary">
+							<?php comment_reply_link( array_merge( $args, array('reply_text' =>'回复', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) );?>
+						</span>
 					</div>
 				</div>
 		<?php
