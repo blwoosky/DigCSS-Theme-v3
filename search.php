@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-	
+<!-- Start left column -->
+	<div class="col-md-9 col-lg-8">
 		<div>
 			<h2 class="BoxTitle1 p10 bgp">搜索结果/search result:</h2>
 			<?php $posts = query_posts($query_string . '&orderby=date&showposts=-1'); ?>

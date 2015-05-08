@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<!-- Start left column -->
+<div class="col-md-9 col-lg-8">
 	<div class="homeList">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="bgp mb30" id="post-<?php the_ID(); ?>">

@@ -1,6 +1,8 @@
 <?php
 get_header(); 
 ?>
+<!-- Start left column -->
+<div class="col-md-9 col-lg-8">
 	<div id="post-<?php the_ID(); ?>">
 		<article class="Box arcWrap">
 			<div class="digcssPath bgp p10">

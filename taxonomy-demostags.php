@@ -3,6 +3,8 @@
   global $query_string;
   query_posts($query_string . '&posts_per_page=20');
 ?>
+<!-- Start left column -->
+	<div class="col-md-9 col-lg-8">
 		<div class="thumbnailPage">
 			<div class="digcssPath bgp p10">
 				<a href="<?php echo home_url(); ?>">首页</a> &gt; 

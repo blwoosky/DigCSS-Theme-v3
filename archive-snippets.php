@@ -3,7 +3,8 @@
 	global $query_string;
 	query_posts($query_string . '&posts_per_page=10');
 ?>
-
+<!-- Start left column -->
+	<div class="col-md-9 col-lg-8">
 
 		<div class="codePage">
 			<div class="digcssPath bgp p10">
@@ -22,8 +23,8 @@
 					?>
 				</div>
 			</div>
-			<div class="mt10 codeWrap bgp p30">
-				<h2 class="BoxInnerTitle">所有代码片段:</h2>
+			<h2 class="arcTitle p10">所有代码片段</h2>
+			<div class="codeWrap bgp p30">
 				<ul class="codeList verList">
 				<?php while (have_posts()) :the_post(); ?>
 					<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>

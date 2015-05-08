@@ -4,8 +4,8 @@
 */
 get_header(); 
 ?>
-
-
+<!-- Start left column -->
+	<div class="col-md-9 col-lg-8">
 		<div class="p10 bgp">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<div class="arcContent">
