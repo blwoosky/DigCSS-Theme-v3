@@ -23,10 +23,7 @@
 
 /*custom style*/
 
-div[rel] { position: relative;margin-top: 40px; }
- 
-div[rel]:before { content: attr(rel);display: block;position: absolute;bottom: 100%;width: 100%;line-height: 25px;color: #fff;background: #DA7000;text-indent: 10px;text-transform: uppercase; }
- 
+
 
 body { background: url(images/bg.png) #535353; background-attachment: fixed; color:#111; }
 h1,h2,h3,h4,h5,h6{ margin:0; }
@@ -140,10 +137,9 @@ ul{ list-style: none;padding: 0;margin:0;}
 }
 
 
-
-
 /* Article Page */
-
+div[rel] { position: relative;margin-top: 40px; }
+div[rel]:before { content: attr(rel);display: block;position: absolute;bottom: 100%;width: 100%;line-height: 25px;color: #fff;background: #DA7000;text-indent: 10px;text-transform: uppercase; }
 .arcWrap .arcMeta { text-align: center; }
  
 .arcTitle { text-transform: capitalize; font-variant: small-caps; margin:0; font-size: 24px; font-family: "Microsoft YaHei"; text-align: center; line-height: 1.2em; padding:20px 5px; color:#fff; }

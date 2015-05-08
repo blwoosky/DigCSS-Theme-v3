@@ -26,7 +26,7 @@
 			<div class="mt10 bgp p15">
 				<ul class="row thumbnailList">
 					<?php while (have_posts()) : the_post(); ?>
-					<li class="fix col-md-4 col-sm-6">
+					<li class="col-md-4 col-sm-6">
 						<?php 
 							if ( has_post_thumbnail() ) {
 						?>
